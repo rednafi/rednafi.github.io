@@ -11,9 +11,14 @@
       <a> href="https://rednafi.com">https://rednafi.com</a>
   </p>
   <script>
-    const currentDomain = window.location.hostname;
-    const newDomain = "rednafi.com";
-    const newPath = window.location.pathname;
-    window.location.href = `https://${newDomain}${newPath}`;
+    // Get the current URL
+    var currentUrl = window.location.href;
+
+    // Define the new domain
+    var newDomain = 'https://rednafi.com';
+
+    // Replace the domain and redirect to the new URL
+    var newUrl = currentUrl.replace(/^https:\/\/rednafi\.github\.io/, newDomain);
+    window.location.href = newUrl;
   </script>
 </body>
