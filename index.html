@@ -2,6 +2,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="robots" content="noindex">
+  <meta name="google-site-verification" content="N5QEPRj-LpgoEY0Hf3uVMmZq8kjDwTFjd54IgvLmRBc" />
   <title>Page redirection</title>
 </head>
 <body>
@@ -13,10 +14,6 @@
     const currentDomain = window.location.hostname;
     const newDomain = "rednafi.com";
     const newPath = window.location.pathname;
-
-    // If current url has '.github.io' in it, redirect to new domain
-    if (currentDomain.includes(".github.io")) {
-      window.location.href = `https://${newDomain}${newPath}`;
-    }
+    window.location.href = `https://${newDomain}${newPath}`;
   </script>
 </body>
