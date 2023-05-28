@@ -3,9 +3,6 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex">
   <title>Page redirection</title>
-  <meta http-equiv="refresh" content="0; url=http://rednafi.com/" />
-  <link rel="canonical" href="https://rednafi.com/" />
-
 </head>
 <body>
   <p>
@@ -13,6 +10,13 @@
       <a> href="https://rednafi.com">https://rednafi.com</a>
   </p>
   <script>
-    window.location.href = "https://" + "rednafi.com" + window.location.pathname
+    const currentDomain = window.location.hostname;
+    const newDomain = "https://rednafi.com";
+    const newPath = window.location.pathname;
+
+    // If current url has '.github.io' in it, redirect to new domain
+    if (currentDomain.includes(".github.io")) {
+      window.location.href = `https://${newDomain}${newPath}`;
+    }
   </script>
 </body>
