@@ -11,12 +11,12 @@
   </p>
   <script>
     const currentDomain = window.location.hostname;
-    const newDomain = "https://rednafi.com";
+    const newDomain = "rednafi.com";
     const newPath = window.location.pathname;
 
     // If current url has '.github.io' in it, redirect to new domain
     if (currentDomain.includes(".github.io")) {
-      window.location.href = `${newDomain}${newPath}`;
+      window.location.href = `https://${newDomain}${newPath}`;
     }
   </script>
 </body>
